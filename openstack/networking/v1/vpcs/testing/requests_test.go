@@ -11,7 +11,7 @@ import (
 	th "github.com/gophercloud/gophercloud/testhelper"
 )
 
-func TestList(t *testing.T) {
+func TestVpcList(t *testing.T) {
 	th.SetupHTTP()
 	defer th.TeardownHTTP()
 
@@ -91,7 +91,7 @@ func TestList(t *testing.T) {
 	th.AssertDeepEquals(t, expected, actual)
 }
 
-func TestGet(t *testing.T) {
+func TestVpcGet(t *testing.T) {
 	th.SetupHTTP()
 	defer th.TeardownHTTP()
 
@@ -132,7 +132,7 @@ func TestGet(t *testing.T) {
 
 }
 
-func TestCreate(t *testing.T) {
+func TestVpcCreate(t *testing.T) {
 	th.SetupHTTP()
 	defer th.TeardownHTTP()
 
@@ -178,7 +178,7 @@ func TestCreate(t *testing.T) {
 	th.AssertEquals(t, false, n.EnableSharedSnat)
 }
 
-func TestUpdate(t *testing.T) {
+func TestVpcUpdate(t *testing.T) {
 	th.SetupHTTP()
 	defer th.TeardownHTTP()
 
@@ -232,7 +232,7 @@ func TestUpdate(t *testing.T) {
 	th.AssertEquals(t, false, n.EnableSharedSnat)
 }
 
-func TestDelete(t *testing.T) {
+func TestVpcDelete(t *testing.T) {
 	th.SetupHTTP()
 	defer th.TeardownHTTP()
 
