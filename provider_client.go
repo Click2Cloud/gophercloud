@@ -55,6 +55,9 @@ type ProviderClient struct {
 	// TokenID is the ID of the most recently issued valid token.
 	TokenID string
 
+	// ProjectID is the ID of project to which User is authorized.
+	ProjectID string
+
 	// EndpointLocator describes how this provider discovers the endpoints for
 	// its constituent services.
 	EndpointLocator EndpointLocator
@@ -310,7 +313,7 @@ func defaultOkCodes(method string) []int {
 	case method == "GET":
 		return []int{200}
 	case method == "POST":
-		return []int{201, 202}
+		return []int{201, 202, 200}
 	case method == "PUT":
 		return []int{201, 202}
 	case method == "PATCH":
